@@ -18,7 +18,10 @@ namespace ProjectManagement.Controllers
                 sum += x;
             return sum / list.Count;
         }
-
+        public ActionResult HelloWorld()
+        {
+            return Content("Hellooo Word!");
+        }
         public ActionResult Index()
         {
             return View();
