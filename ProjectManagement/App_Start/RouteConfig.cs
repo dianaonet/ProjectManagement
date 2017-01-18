@@ -17,8 +17,13 @@ namespace ProjectManagement
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional });
-                
-             routes.MapRoute(
+
+            routes.MapRoute(
+            name: "ProjectTema",
+            url: "Project/redirectpermanent",
+            defaults: new { controller = "Project", action = "redirectpermanent", name = UrlParameter.Optional });
+
+            routes.MapRoute(
                 name: "Project",
                 url: "Project/doanaction",
                 defaults: new { controller = "Project", action = "doanaction", name = UrlParameter.Optional });
@@ -27,6 +32,11 @@ namespace ProjectManagement
                name: "ProjectAlfa",
                 url: "Project/{alpha}",
               defaults: new { controller = "Project", action = "HelloUser", alpha = UrlParameter.Optional });
+
+            routes.MapRoute(
+                name: "ProjectRedirect",
+                url: "Project/redirecttoroute",
+                defaults: new { controller = "Home", action = "About", name = UrlParameter.Optional });
         }
     }
 }

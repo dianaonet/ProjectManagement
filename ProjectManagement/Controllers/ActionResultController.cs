@@ -16,6 +16,20 @@ namespace ProjectManagement.Controllers
         {
             return RedirectToAction("Index");
         }
+        public ActionResult RedirectToActionInHomeController()
+        {
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult RedirectToRoute()
+        {
+            return RedirectToRoute("About");
+        }
+
+        public ActionResult ReturnFile()
+        {
+            return Content("Site.css");
+        }
 
         public ActionResult Index()
         {
